@@ -1,7 +1,9 @@
 import { BrowserRouter,Routes,Route, Link } from 'react-router-dom';
 import { Landingpage } from './pages/index';
-import {Chessmaster} from './pages/CHessmaster/index'
-import {Calculator} from './pages/calculator'
+import {Chessmaster} from './pages/CHessmaster/index';
+import {Calculator} from './pages/calculator'; 
+import {ComponentsWithStyle} from './pages/newComponents';
+
 function App() {
   return (  
     
@@ -13,6 +15,8 @@ function App() {
     <Route path="/landing" element={<Landingpage/>}/>
     <Route path="/calculator" element={<Calculator/>}/>
     <Route path="/chessmaster" element={<Chessmaster/>}/>
+    <Route path="/Components" element={<ComponentsWithStyle/>}/>
+
    </Routes>
 
    </BrowserRouter>
@@ -30,6 +34,10 @@ function Linkerar(){
       <li>
         <Link to="/chessmaster">checkmaster</Link>
       </li>
+      <li>
+        <Link to="/Components">New</Link>
+      </li>
+      
     </ul>
   </nav>
 );
